@@ -1,0 +1,47 @@
+/* Phone first: one column, big touch targets. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #1f1a2e;
+  background: #faf9fc;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+input,
+select,
+button {
+  min-height: 3rem;
+  font: inherit;
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+}
+
+input,
+select {
+  border: 1px solid #c9c4d6;
+}
+
+button {
+  border: 0;
+  background: #5e01d0;
+  color: white;
+  font-weight: 600;
+}
+
+.bad-network {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  font-size: 0.875rem;
+}

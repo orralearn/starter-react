@@ -1,0 +1,4 @@
+# Files git never saves: npm puts packages back with `npm install`,
+# and the workflow builds dist on GitHub.
+node_modules
+dist
