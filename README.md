@@ -5,6 +5,28 @@ TypeScript, React Router, Vitest and Testing Library, ESLint, published by GitHu
 
 **Live site:** add your link here (Settings → Pages shows it).
 
+## Start on a phone (Termux)
+
+Once per phone, in Termux:
+
+```bash
+pkg install nodejs git gh
+gh auth login
+```
+
+For each project (here `my-menu`), on Wi-Fi if you can:
+
+```bash
+gh repo create my-menu --template orralearn/starter-react --public --clone
+cd my-menu
+npm install --prefer-offline
+npm run dev
+```
+
+Then open Chrome on the same phone at http://localhost:5173. To stop `npm run dev`, press
+**CTRL** then **C** in Termux (the CTRL key is on Termux's extra keys row). On GitHub, once:
+**Settings → Pages → Source: GitHub Actions**, so each `git push` publishes your app.
+
 ## Commands
 
 Run them in this folder (`cd` into it first).
@@ -33,6 +55,17 @@ never published. The Actions tab shows a green tick when it worked. Once per rep
 - The **console button** (bottom right, only with `npm run dev`) shows what `console.log`
   prints, your errors and React's warnings: Chrome on Android has no DevTools.
 - Chrome on the same phone opens http://localhost:5173 while `npm run dev` runs in Termux.
+
+## Photos and other files
+
+Put them in `public/` (for example `public/images/eru.jpg`) and use `asset` from `src/base.ts`:
+
+```tsx
+<img src={asset("images/eru.jpg")} alt="A plate of eru" />
+```
+
+On GitHub Pages your site lives under `/my-menu/`, so a plain `/images/eru.jpg` works with
+`npm run dev` but breaks once published. `asset("images/eru.jpg")` works in both.
 
 ## Data from a "server"
 
